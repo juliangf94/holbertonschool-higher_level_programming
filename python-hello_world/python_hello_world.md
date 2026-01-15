@@ -38,7 +38,7 @@ Strings are sequences of characters wrapped in single (') or double (") quotes:
     # word[0] is 'P', word[-1] is 'n' (last character)
 ```
 -   Slicing: 
-    Extracting a part of a string using the syntax [start:stop:step].
+        Extracting a part of a string using the syntax [start:stop:step].
 ```Python
         word = "Python"
             # word[1:4] = 'yth'
@@ -58,12 +58,12 @@ Strings are sequences of characters wrapped in single (') or double (") quotes:
 ```
 ##   What is the official Python coding style and how to check your code with pycodestyle
 -   Official Style: 
-    It is called PEP 8 (Python Enhancement Proposal 8). 
-    It provides guidelines for naming conventions (like using snake_case for variables), 
+    -    It is called PEP 8 (Python Enhancement Proposal 8). 
+    -    It provides guidelines for naming conventions (like using snake_case for variables), 
     indentation (4 spaces), and white space.
 -   Checking with pycodestyle: 
-    It is a tool that automatically checks your code for style violations. 
-    To check a file, run:
+    -    It is a tool that automatically checks your code for style violations. 
+    -    To check a file, run:
 ```Python
     pycodestyle filename.py
 ```
@@ -182,7 +182,6 @@ print(a[-2])
 -   [ ]l
 -   [x]`o`
 -   [ ]Nothing
-
 ---------------------------------------------------------------------------------------------------------------------
 # Exercises
 ## 2-print.py
@@ -212,7 +211,7 @@ Output:
 ```bash
 98 Battery street
 ```
-    ■   :d : Indica a Python que debe tratar la variable como un entero decimal.
+-    :d : Indica a Python que debe tratar la variable como un entero decimal.
 
 pycodestyle 3-print_number.py
 
@@ -229,9 +228,9 @@ Output:
 ```bash
 Float: 3.14
 ```
-    ■   . indica que vamos a configurar la precisión decimal.
-    ■   2 especifica que queremos exactamente dos dígitos después del punto.
-    ■   f le indica a Python que trate el número como un float (punto flotante).
+-    . indica que vamos a configurar la precisión decimal.
+-    2 especifica que queremos exactamente dos dígitos después del punto.
+-    f le indica a Python que trate el número como un float (punto flotante).
 
 
 pycodestyle 4-print_float.py
