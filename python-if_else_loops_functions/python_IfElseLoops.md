@@ -1,35 +1,37 @@
 #   General
 ##  Why indentation is so important in Python
 
-In Python, indentation is not just for readability; it is part of the syntax. 
-It defines the grouping of statements (blocks of code). 
+In Python, indentation is not just for readability; it is part of the syntax.  
+It defines the grouping of statements (blocks of code).  
 While C uses curly braces {}, Python uses a consistent level
 
 ##  How to use the if, if ... else statements
 
-if, if ... else: Used for conditional branching.
+if, if ... else:   
+Used for conditional branching.
 
-Python
-
+```Python
 if x > 0:
     print("Positive")
 elif x == 0:
     print("Zero")
 else:
     print("Negative")
-
+```
 ##  How to use comments
 
-Use the hash symbol # for single-line comments. For multi-line documentation, use triple quotes """Docstring""".
+Use the hash symbol `#` for single-line comments.  
+For multi-line documentation, use triple quotes `"""Docstring"""`.
 
 ##  How to affect values to variables
 
-You use the assignment operator =. For example, x = 5. Python is dynamically typed, so you don't need to declare the data type.
+You use the assignment operator = .  
+For example, x = 5 .  
+Python is dynamically typed, so you don't need to declare the data type.
 
 ##  How to use the while and for loops
 
-while repeats as long as a condition is True.
-
+while repeats as long as a condition is True.  
 for iterates over a sequence (like a list or a range).
 
 ##  How to use the break and continues statements
@@ -40,15 +42,21 @@ continue: Skips the rest of the current iteration and moves to the next one.
 
 ##  How to use else clauses on loops
 
-A unique Python feature. The else block executes only if the loop finished normally (i.e., it did NOT hit a break).
+A unique Python feature.  
+The else block executes only if the loop finished normally (i.e., it did NOT hit a break).
 
 ##  What does the pass statement do, and when to use it
 
-A null operation. It is used as a placeholder when a statement is syntactically required but you don’t want to execute any code yet.
+A null operation.  
+It is used as a placeholder when a statement is syntactically required but you don’t want to execute any code yet.
 
 ##  How to use range
 
-A function that generates a sequence of numbers. range(start, stop, step). Remember: the stop value is never included.
+A function that generates a sequence of numbers.
+```Python
+range(start, stop, step).
+```    
+Remember: the stop value is never included.
 
 ##  What is a function and how do you use functions
 
@@ -70,6 +78,7 @@ An error report that shows the "path" of the execution that led to a crash, incl
 
 ##  What are the arithmetic operators and how to use them
 
+
 +, -, *, / (Standard)
 
 // (Floor division: returns the integer, discards decimals)
@@ -80,61 +89,53 @@ An error report that shows the "path" of the execution that led to a crash, incl
 
 ----------------------------------------------------------------------------------------------------------------------------
 #   Quiz
-Question #0
+##  Question #0
 What do these lines print?
-
+```Python
 if True:
     print("Holberton")
 else:
     print("School")
+```
+-   [ ]Holberton
+-   [ ]School
 
-Holberton
-
-
-School
-
-Question #1
+##  Question #1
 What do these lines print?
-
+```Python
 if 12 == 48/4:
     print("Holberton")
 else:
     print("School")
+```
+-   [ ]Holberton
+-   [ ]School
 
-Holberton
-
-
-School
-
-Question #2
+##  Question #2
 What do these lines print?
-
+```Python
 if 12 == 48/4 and False:
     print("Holberton")
 else:
     print("School")
+```
+-   [ ]Holberton
+-   [ ]School
 
-Holberton
-
-
-School
-
-Question #3
+##  Question #3
 What do these lines print?
-
+```Python
 if 12 == 48/3 or 12 is 12:
     print("Holberton")
 else:
     print("School")
+```
+-   [ ]Holberton
+-   [ ]School
 
-Holberton
-
-
-School
-
-Question #4
+##   Question #4
 What do these lines print?
-
+```Python
 a = 12
 if a > 2:
     if a % 2 == 0:
@@ -143,18 +144,14 @@ if a > 2:
         print("C is fun")
 else:
     print("School")
+```
+-   [ ]Holberton
+-   [ ]C is fun
+-   [ ]School
 
-Holberton
-
-
-C is fun
-
-
-School
-
-Question #5
+##  Question #5
 What do these lines print?
-
+```Python
 a = 12
 if a < 2:
     print("Holberton")
@@ -162,65 +159,43 @@ elif a % 2 == 0:
     print("C is fun")
 else:
     print("School")
+```
+-   [ ]Holberton
+-   [ ]C is fun
+-   [ ]School
 
-Holberton
-
-
-C is fun
-
-
-School
-
-Question #6
+##  Question #6
 What do these lines print?
-
+```Python
 for i in range(4):
     print(i, end=" ")
+```
+-   [ ]1 2 3 4
+-   [ ]1 2 3
+-   [ ]0 1 2 3
+-   [ ]0 1 2 3 4
 
-1 2 3 4
-
-
-1 2 3
-
-
-0 1 2 3
-
-
-0 1 2 3 4
-
-Question #7
+##  Question #7
 What do these lines print?
-
+```Python
 for i in range(2, 4):
     print(i, end=" ")
+```
+-   [ ]2 4
+-   [ ]2 3
+-   [ ]2 3 4
+-   [ ]3 4
 
-2 4
-
-
-2 3
-
-
-2 3 4
-
-
-3 4
-
-Question #8
+##  Question #8
 What do these lines print?
-
+```Python
 for i in range(2, 10, 2):
     print(i, end=" ")
-
-2 3 4 5 6 7 8 9 10
-
-
-2 3 4 5 6 7 8 9
-
-
-4 6 8 10 12 14 16 18
-
-
-2 4 6 8
+```
+-   [ ]2 3 4 5 6 7 8 9 10
+-   [ ]2 3 4 5 6 7 8 9
+-   [ ]4 6 8 10 12 14 16 18
+-   [ ]2 4 6 8
 
 ----------------------------------------------------------------------------------------------------------------------------
 #   Exercises
@@ -263,11 +238,13 @@ else:
     print("and is less than 6 and not 0")
 
 ```
-    ■   printf():   Aáde automaticamente un salto de linea (\n) al final.
-    ■   end=" " : Le dice a Python: "No saltes de línea, termina con un espacio y quédate ahí"
-
+-   printf():
+    -   Añáde automaticamente un salto de linea (\n) al final.
+-   end=" " : 
+    -   Le dice a Python: "No saltes de línea, termina con un espacio y quédate ahí"
+```Bash
 pycodestyle 1-last_digit.py
-
+```
 ##  2-print_alphabet.py
 
 ```python
@@ -276,14 +253,17 @@ for i in range(97, 123):
     print("{:s}".format(chr(i)), end="")
 
 ```
-    ■   Usamos range(97, 123) para representar las letras del abecedario. 
-        Usamos 123 como limite superior ya que el valor final de un range es exclusivo
-    ■   "{:s}".format(...): Usamos formato string.
-    ■   chr(i): Esta funcion toma el numero y lo transforma en letra.
-    ■   end="": print añade un salto de linea. Con esto le decimos que no añada nada.
-
+-   Usamos range(97, 123) para representar las letras del abecedario.  
+    Usamos 123 como limite superior ya que el valor final de un range es exclusivo
+-   "{:s}".format(...):
+    -   Usamos formato string.
+-   chr(i):
+    -   Esta funcion toma el numero y lo transforma en letra.
+-   end="":
+    -   print añade un salto de linea. Con esto le decimos que no añada nada.
+```Bash
 pycodestyle 2-print_alphabet.py
-
+```
 ##  3-print_alphabt.py
 
 ```python
@@ -293,8 +273,9 @@ for i in range(97, 123):
         print("{:s}".format(chr(i)), end="")
 
 ```
+```Bash
 pycodestyle 3-print_alphabt.py
-
+```
 ##  4-print_hexa.py
 
 ```python
@@ -303,9 +284,9 @@ for i in range(0, 99):
     print("{:d} = 0x{:x}".format(i, i))
 
 ```
-
+```Bash
 pycodestyle 4-print_hexa.py
-
+```
 ##  5-print_comb2.py
 
 ```python
@@ -317,8 +298,9 @@ for i in range(0, 100):
         print("{:02d}".format(i))
 
 ```
+```Bash
 pycodestyle 5-print_comb2.py
-
+```
 ##  6-print_comb3.py
 
 ```python
@@ -331,8 +313,9 @@ for digit1 in range(0, 10):
             print("{:d}{:d}".format(digit1, digit2), end=", ")
 
 ```
+```Bash
 pycodestyle 6-print_comb3.py
-
+```
 ##  7-islower.py
 `7-main.py`
 ```python
@@ -356,10 +339,11 @@ def islower(c):
         return False
 
 ```
-    ■   ord(c): Convierte una letra en su codigo decimal ASCII.
-
+-   ord(c): 
+    -   Convierte una letra en su codigo decimal ASCII.
+```Bash
 pycodestyle 7-islower.py
-
+```
 ##  8-uppercase.py
 
 ```python
@@ -371,8 +355,9 @@ def islower(c):
         return False
 
 ```
+```Bash
 pycodestyle 8-uppercase.py
-
+```
 ##  9-print_last_digit.py
 
 `9-main.py`
@@ -395,10 +380,11 @@ def print_last_digit(number):
     return last_digit
 
 ```
-    ■   abs(): Devuelve el valor absoluto
-
+-   abs(): 
+    -   Devuelve el valor absoluto
+```Bash
 pycodestyle 9-print_last_digit.py
-
+```
 ##  10-add.py
 `10-main.py`
 ```python
@@ -415,8 +401,9 @@ print(add(100, -2))
 def add(a, b):
     return (a + b)
 ```
+```Bash
 pycodestyle 10-add.py
-
+```
 ##  11-pow.py
 `11-main.py`
 ```python
@@ -436,11 +423,17 @@ def pow(a, b):
     return (a ** b)
 
 ```
+```Bash
 pycodestyle 11-pow.py
-
+```
 ##  12-fizzbuzz.py
 `12-main.py`
 ```python
+#!/usr/bin/python3
+fizzbuzz = __import__('12-fizzbuzz').fizzbuzz
+
+fizzbuzz()
+print("")
 
 ```
 `12-fizzbuzz.py`
@@ -460,9 +453,9 @@ def fizzbuzz():
             print("{:d}".format(i), end=" ")
 
 ```
-El comando cat -e sirve para "hacer visibles los caracteres invisibles".
-El $ representa un salto de línea (\n).
-
+-   El comando cat -e sirve para "hacer visibles los caracteres invisibles".
+-   El $ representa un salto de línea (\n).
+```Bash
 pycodestyle 12-fizzbuzz.py
-
+```
 
