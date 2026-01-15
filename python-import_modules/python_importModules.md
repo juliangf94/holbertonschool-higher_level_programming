@@ -275,7 +275,7 @@ if __name__ == "__main__":
     -   En Python, los nombres que empiezan con doble guion bajo (como __name__ o __doc__) se consideran "built-in" o internos.
 
 -   ¿Qué es un .pyc?: 
-    Explica que es el archivo que genera Python después de "compilar" el código fuente a bytecode para que se ejecute más rápido la próxima vez.
+    -   Explica que es el archivo que genera Python después de "compilar" el código fuente a bytecode para que se ejecute más rápido la próxima vez.
 -   Introspección: 
     -   Menciona que dir() es una herramienta de introspección, una característica de Python que permite al programa examinarse a sí mismo en tiempo de ejecución.
 -   Filtro de Dunders: 
