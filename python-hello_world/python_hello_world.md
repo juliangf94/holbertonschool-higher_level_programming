@@ -81,10 +81,10 @@ What does this command line print?
 print("Holberton school")
 ```
 
--   Holberton
--   “Holberton school”
--   `Holberton school`
--   ‘Holberton school’
+-   [ ]Holberton
+-   [ ]“Holberton school”
+-   [x]`Holberton school`
+-   [ ]‘Holberton school’
 
 ##   Question #1
 What does this command line print?
@@ -93,10 +93,10 @@ What does this command line print?
 print(f"{98} Battery street")
 ```
 
--   `98 Battery street`
--   f"98 Battery street"
--   9 Battery street
--   8 Battery street
+-   [x]`98 Battery street`
+-   [ ]f"98 Battery street"
+-   [ ]9 Battery street
+-   [ ]8 Battery street
 
 ##  Question #2
 What does this command line print?
@@ -105,10 +105,10 @@ What does this command line print?
 print(f"{98} Battery street, {'San Francisco'}")
 ```
 
--   “98 Battery street, San Francisco”
--   8 Battery street, San
--   `98 Battery street, San Francisco`
--   San Francisco Battery street, 98
+-   [ ]“98 Battery street, San Francisco”
+-   [ ]8 Battery street, San
+-   [x]`98 Battery street, San Francisco`
+-   [ ]San Francisco Battery street, 98
 
 ##  Question #3
 What does this command line print?
@@ -118,10 +118,10 @@ a = "Python is cool"
 print(a[4])
 ```
 
--   P
--   n
--   `o`
--   h
+-   [ ]P
+-   [ ]n
+-   [x]`o`
+-   [ ]h
 
 ##  Question #4
 What does this command line print?
@@ -131,10 +131,10 @@ a = "Python is cool"
 print(a[0:6])
 ```
 
--   `Python`
--   Pytho
--   Python is
--   Python is cool
+-   [x]`Python`
+-   [ ]Pytho
+-   [ ]Python is
+-   [ ]Python is cool
 
 ##  Question #5
 What does this command line print?
@@ -144,10 +144,10 @@ a = "Python is cool"
 print(a[:6])
 ```
 
--   Pytho
--   `Python`
--   Python is
--   is cool
+-   [ ]Pytho
+-   [x]`Python`
+-   [ ]Python is
+-   [ ]is cool
 
 ##  Question #6
 What does this command line print?
@@ -157,10 +157,10 @@ a = "Python is cool"
 print(a[7:])
 ```
 
--   Python i
--   Python is
--   cool
--   `is cool`
+-   [ ]Python is
+-   [ ]Python i
+-   [ ]cool
+-   [x]`is cool`
 
 ##  Question #7
 What does this command line print?
@@ -170,11 +170,11 @@ a = "Python is cool"
 print(a[7:-5])
 ```
 
--   on
--   nohtyP
--   Python
--   si
--   `is`
+-   [ ]on
+-   [ ]nohtyP
+-   [ ]Python
+-   [ ]si
+-   [x]`is`
 
 ##  Question #8
 What does this command line print?
@@ -184,10 +184,10 @@ a = "Python is cool"
 print(a[-2])
 ```
 
--   ol
--   l
--   `o`
--   Nothing
+-   [ ]ol
+-   [ ]l
+-   [x]`o`
+-   [ ]Nothing
 
 ---------------------------------------------------------------------------------------------------------------------
 # Exercises
