@@ -97,7 +97,7 @@ if True:
 else:
     print("School")
 ```
--   [ ]Holberton
+-   [x]Holberton
 -   [ ]School
 
 ##  Question #1
@@ -108,7 +108,7 @@ if 12 == 48/4:
 else:
     print("School")
 ```
--   [ ]Holberton
+-   [x]Holberton
 -   [ ]School
 
 ##  Question #2
@@ -120,7 +120,7 @@ else:
     print("School")
 ```
 -   [ ]Holberton
--   [ ]School
+-   [x]School
 
 ##  Question #3
 What do these lines print?
@@ -130,7 +130,7 @@ if 12 == 48/3 or 12 is 12:
 else:
     print("School")
 ```
--   [ ]Holberton
+-   [x]Holberton
 -   [ ]School
 
 ##   Question #4
@@ -145,7 +145,7 @@ if a > 2:
 else:
     print("School")
 ```
--   [ ]Holberton
+-   [x]Holberton
 -   [ ]C is fun
 -   [ ]School
 
@@ -161,7 +161,7 @@ else:
     print("School")
 ```
 -   [ ]Holberton
--   [ ]C is fun
+-   [x]C is fun
 -   [ ]School
 
 ##  Question #6
@@ -172,7 +172,7 @@ for i in range(4):
 ```
 -   [ ]1 2 3 4
 -   [ ]1 2 3
--   [ ]0 1 2 3
+-   [x]0 1 2 3
 -   [ ]0 1 2 3 4
 
 ##  Question #7
@@ -182,7 +182,7 @@ for i in range(2, 4):
     print(i, end=" ")
 ```
 -   [ ]2 4
--   [ ]2 3
+-   [x]2 3
 -   [ ]2 3 4
 -   [ ]3 4
 
@@ -195,7 +195,7 @@ for i in range(2, 10, 2):
 -   [ ]2 3 4 5 6 7 8 9 10
 -   [ ]2 3 4 5 6 7 8 9
 -   [ ]4 6 8 10 12 14 16 18
--   [ ]2 4 6 8
+-   [x]2 4 6 8
 
 ----------------------------------------------------------------------------------------------------------------------------
 #   Exercises
