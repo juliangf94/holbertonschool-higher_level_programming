@@ -1,48 +1,45 @@
 #   General
 ##   How to use the Python interpreter
-
 The interpreter is the engine that executes your code. You can use it in two ways:
-    -   Interactive Mode: 
-        Simply type python3 in your terminal. 
-        You will see the >>> prompt, where you can type code and get immediate results. 
-        To exit, type exit() or press Ctrl + D.
-    -   Script Mode: 
-        You write your code in a file ending in .py (e.g., myscript.py). 
-        You run it by typing python3 myscript.py in the terminal, or by making the file executable and running ./myscript.py.
+-   Interactive Mode:
+    -    Simply type python3 in your terminal. 
+    -    You will see the >>> prompt, where you can type code and get immediate results. 
+    -    To exit, type exit() or press Ctrl + D.
+-   Script Mode: 
+    -    You write your code in a file ending in .py (e.g., myscript.py). 
+    -    You run it by typing python3 myscript.py in the terminal, or by making the file executable and running ./myscript.py.
 
 ##   How to print text and variables using print
-
-The print() function displays information on the screen.
-    -   Strings: 
-        print("Hello World")
-    -   Variables: 
-        name = "Julian" -> print(name)
-    -   Formatted Output: 
-        Use f-strings for efficiency:            
-            age = 30
-            print(f"I am {age} years old.")
-    
+The print() function displays information on the screen:
+-   Strings: 
+    -    print("Hello World")
+-   Variables: 
+    -    name = "Julian" -> print(name)
+-   Formatted Output: 
+    -    Use f-strings for efficiency:            
+```Python
+    age = 30
+    print(f"I am {age} years old.")
+```
 ##   How to use strings
-
-Strings are sequences of characters wrapped in single (') or double (") quotes.
-    -   Concatenation: 
-        Combining strings using +.
-    -   Repetition:     
-        Using * (e.g., "Holberton" * 3).
-    -   Immutability: 
-        Once a string is created, its characters cannot be changed individually.
+Strings are sequences of characters wrapped in single (') or double (") quotes:
+-   Concatenation: 
+    -    Combining strings using +.
+-   Repetition:     
+    -    Using * (e.g., "Holberton" * 3).
+-   Immutability: 
+    -    Once a string is created, its characters cannot be changed individually.
 
 ##   What are indexing and slicing in Python
-
-    -   Indexing: 
-        Accessing a single character by its position. Indices start at 0.
-
-        word = "Python"
-        # word[0] is 'P', word[-1] is 'n' (last character)
-
-    -   Slicing: 
+-   Indexing: 
+    -    Accessing a single character by its position. Indices start at 0.
+```Python
+    word = "Python"
+    # word[0] is 'P', word[-1] is 'n' (last character)
+```
+-   Slicing: 
         Extracting a part of a string using the syntax [start:stop:step].
-
+```Python
         word = "Python"
             # word[1:4] = 'yth'
             # word[0:2] = 'Py' (from index 0 up to, but NOT including, index 2)
@@ -58,22 +55,19 @@ Strings are sequences of characters wrapped in single (') or double (") quotes.
         Casos "Extrños":
         # word[5:2] = '' (vacio) Si el inicio es mayor que el final y el paso es positivo no devuelve nada
         # word[0:100] = 'Python'
-
-
+```
 ##   What is the official Python coding style and how to check your code with pycodestyle
-
-    -   Official Style: 
-        It is called PEP 8 (Python Enhancement Proposal 8). 
-        It provides guidelines for naming conventions (like using snake_case for variables), 
-        indentation (4 spaces), and white space.
-
-    -   Checking with pycodestyle: 
-        It is a tool that automatically checks your code for style violations. 
-        To check a file, run:
-            pycodestyle filename.py
-
+-   Official Style: 
+    -    It is called PEP 8 (Python Enhancement Proposal 8). 
+    -    It provides guidelines for naming conventions (like using snake_case for variables), 
+    indentation (4 spaces), and white space.
+-   Checking with pycodestyle: 
+    -    It is a tool that automatically checks your code for style violations. 
+    -    To check a file, run:
+```Python
+    pycodestyle filename.py
+```
 ---------------------------------------------------------------------------------------------------------------------
-
 ##   Question #0
 What does this command line print?
 
@@ -188,7 +182,6 @@ print(a[-2])
 -   [ ]l
 -   [x]`o`
 -   [ ]Nothing
-
 ---------------------------------------------------------------------------------------------------------------------
 # Exercises
 ## 2-print.py
@@ -218,7 +211,7 @@ Output:
 ```bash
 98 Battery street
 ```
-    ■   :d : Indica a Python que debe tratar la variable como un entero decimal.
+-    :d : Indica a Python que debe tratar la variable como un entero decimal.
 
 pycodestyle 3-print_number.py
 
@@ -235,9 +228,9 @@ Output:
 ```bash
 Float: 3.14
 ```
-    ■   . indica que vamos a configurar la precisión decimal.
-    ■   2 especifica que queremos exactamente dos dígitos después del punto.
-    ■   f le indica a Python que trate el número como un float (punto flotante).
+-    . indica que vamos a configurar la precisión decimal.
+-    2 especifica que queremos exactamente dos dígitos después del punto.
+-    f le indica a Python que trate el número como un float (punto flotante).
 
 
 pycodestyle 4-print_float.py
