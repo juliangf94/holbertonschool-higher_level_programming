@@ -44,7 +44,7 @@ Strings are sequences of characters wrapped in single (') or double (") quotes.
         Extracting a part of a string using the syntax [start:stop:step].
 
         word = "Python"
-            # word[1:4] = 'yth'thon
+            # word[1:4] = 'yth'
             # word[0:2] = 'Py' (from index 0 up to, but NOT including, index 2)
             # word[2:] = ''
             # word[:4] = 'Pyth'
@@ -58,9 +58,7 @@ Strings are sequences of characters wrapped in single (') or double (") quotes.
         Casos "Extrños":
         # word[5:2] = '' (vacio) Si el inicio es mayor que el final y el paso es positivo no devuelve nada
         # word[0:100] = 'Python'
-        # word[] = ''
-        # word[] = ''
-        # word[] = ''
+
 
 ##   What is the official Python coding style and how to check your code with pycodestyle
 
@@ -180,8 +178,9 @@ Nothing
 #!/usr/bin/python3
 print("\"Programming is like building a multilingual puzzle")
 ```
-```
-Output:
+```markdown
+Output: 
+```bash
 "Programming is like building a multilingual puzzle
 ```
 pycodestyle 2-print.py
@@ -193,8 +192,9 @@ pycodestyle 2-print.py
 number = 98
 print(f"{number:d} Battery street")
 ```
-```
-Output:
+```markdown
+Output: 
+```bash
 98 Battery street
 ```
     ■   :d : Indica a Python que debe tratar la variable como un entero decimal.
@@ -208,8 +208,9 @@ pycodestyle 3-print_number.py
 number = 3.14159
 print(f"Float: {number:.2f}")
 ```
-```
-Output:
+```markdown
+Output: 
+```bash
 Float: 3.14
 ```
     ■   . indica que vamos a configurar la precisión decimal.
@@ -227,8 +228,9 @@ str = "Holberton School"
 print(str * 3)
 print(str[:9])
 ```
-```
+```markdown
 Output: 
+```bash
 Holberton SchoolHolberton SchoolHolberton School
 Holberton
 ```
@@ -243,8 +245,9 @@ str2 = "School"
 str1 = f"Welcome to {str1} {str2}!"
 print(str1)
 ```
-```
+```markdown
 Output: 
+```bash 
 Welcome to Holberton School!
 ```
 pycodestyle 6-concat.py 
@@ -261,8 +264,9 @@ print(f"First 3 letters: {word_first_3}")
 print(f"Last 2 letters: {word_last_2}")
 print(f"Middle word: {middle_word}")
 ```
-```
+```markdown
 Output: 
+```bash
 First 3 letters: Hol
 Last 2 letters: on
 Middle word: olberto
@@ -279,20 +283,29 @@ str = "Python is an interpreted, interactive, object-oriented programming\
 str = str[39:67] + str[107:112] + str[:6]
 print(str)
 ```
-```
+```markdown
 Output: 
+```bash
 object-oriented programming with Python
 ```
 pycodestyle 8-concat_edges.py
 
 ## 9-easter_egg.py
+Write a Python script that prints “The Zen of Python”, by Tim Peters, followed by a new line.
 `9-easter_egg.py`
 ```Python
 #!/usr/bin/python3
 import this
 ```
-```
+```markdown
 Output: 
-Text
+```bash
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+...
 ```
 pycodestyle 9-easter_egg.py
