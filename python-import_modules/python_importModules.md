@@ -60,115 +60,82 @@ print(f"First argument: {sys.argv[1]}")
 
 ----------------------------------------------------------------------------------------------------------------------------
 #   Quiz
-
-Question #0
+##  Question #0
 What do these lines print?
+```Python
+def my_function():
+    print("In my function")
 
->>> def my_function():
->>>     print("In my function")
->>> 
->>> my_function()
+my_function()
+```
+-   [ ]“In my function”
+-   [x]In my function
+-   [ ]function my_function at …
+-   [ ]Nothing
 
-“In my function”
-
-
-In my function
-
-
-function my_function at …
-
-
-Nothing
-
-Question #1
+##  Question #1
 What do these lines print?
+```Python
+    print("In my function")
+def my_function():
+```
+-   [ ]my_function
+-   [ ]“In my function”
+-   [ ]In my function
+-   [x]function my_function at …
+-   [ ]Nothing
 
->>> def my_function():
->>>     print("In my function")
->>> 
->>> my_function
-
-“In my function”
-
-
-In my function
-
-
-function my_function at …
-
-
-Nothing
-
-Question #2
+##  Question #2
 What do these lines print?
+```Python
+def my_function(counter):
+    print("Counter: {}".format(counter))
 
->>> def my_function(counter):
->>>     print("Counter: {}".format(counter))
->>> 
->>> my_function(12)
+my_function(12)
+```
+-   [ ]Counter: counter
+-   [ ]Counter: c
+-   [x]Counter: 12
 
-Counter: counter
-
-
-Counter: c
-
-
-Counter: 12
-
-Question #3
+##  Question #3
 What do these lines print?
+```Python
+def my_function(counter=89):
+    print("Counter: {}".format(counter))
 
->>> def my_function(counter=89):
->>>     print("Counter: {}".format(counter))
->>> 
->>> my_function(12)
+my_function(12)
+```
+-   [x]Counter: 12
+-   [ ]Counter: 89
+-   [ ]Counter: 101
 
-Counter: 12
-
-
-Counter: 89
-
-
-Counter: 101
-
-Question #4
+##  Question #4
 What do these lines print?
+```Python
+def my_function(counter=89):
+    print("Counter: {}".format(counter))
 
->>> def my_function(counter=89):
->>>     print("Counter: {}".format(counter))
->>> 
->>> my_function()
+my_function()
+```
+-   [ ]Counter: 12
+-   [x]Counter: 89
+-   [ ]Counter: 101
 
-Counter: 12
-
-
-Counter: 89
-
-
-Counter: 101
-
-Question #5
+##  Question #5
 What do these lines print?
+```Python
+def my_function(counter=89):
+    return counter + 1
 
->>> def my_function(counter=89):
->>>     return counter + 1
->>> 
->>> print(my_function())
-
-1
-
-
-89
-
-
-90
-
-
-891
+print(my_function())
+```
+-   [ ]1
+-   [ ]89
+-   [x]90
+-   [ ]891
 
 ----------------------------------------------------------------------------------------------------------------------------
 #   Exercises
-
 ## 0-add.py
 `add_0.py`
 ```Python
@@ -188,12 +155,12 @@ if __name__ == "__main__":
     print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
 
 ```
-    ■   if __name__ == "__main__": 
-        -   Evita que el código se ejecute si alguien importa tu archivo 0-add.py desde otro lugar. 
-        -   Solo se ejecuta si corres el archivo directamente con ./0-add.py
-    ■   from add_0 import add:
-        -   Usamos from...import como pide la tarea.
-        -   Aquí es donde aparece la palabra add_0. Según las reglas, no puedes volver a escribirla en ninguna otra parte del código
+-   if __name__ == "__main__": 
+    -   Evita que el código se ejecute si alguien importa tu archivo 0-add.py desde otro lugar. 
+    -   Solo se ejecuta si corres el archivo directamente con ./0-add.py
+-   from add_0 import add:
+    -   Usamos from...import como pide la tarea.
+    -   Aquí es donde aparece la palabra add_0. Según las reglas, no puedes volver a escribirla en ninguna otra parte del código
 
 ## 1-calculation.py
 `calculator_1.py `
@@ -228,10 +195,6 @@ if __name__ == "__main__":
 ```
 
 ## 2-args.py
-` `
-```Python
-
-```
 `2-args.py`
 ```Python
 #!/usr/bin/python3
@@ -252,23 +215,19 @@ if __name__ == "__main__":
         print("{:d}: {:s}".format(i, argv[i]))
 ```
 
-    ■   import sys: Para acceder a sys.argv
-    ■   argc = len(argv) - 1: 
-        Restamos 1 porque no queremos contar el nombre del archivo (2-args.py) como un argumento del usuario.
-    ■   Lógica del Plural y Puntuación
-        -   Si es 0: Usamos "arguments" y terminamos con punto (.).
-        -   Si es 1: Usamos "argument" (singular) y terminamos con dos puntos (:).
-        -   Si es más de 1: Usamos "arguments" (plural) y terminamos con dos puntos (:).
-    ■   El Bucle for:
-        -   Usamos range(1, argc + 1) para empezar desde el índice 1 (el primer argumento real) hasta el último.
-        -   Imprimimos la posición y el valor usando el formato solicitado. 
-    ■   argv es una lista y calculamos su tamaño con len().
+-   import sys: Para acceder a sys.argv
+-   argc = len(argv) - 1: 
+    -   Restamos 1 porque no queremos contar el nombre del archivo (2-args.py) como un argumento del usuario.
+-   Lógica del Plural y Puntuación
+    -   Si es 0: Usamos "arguments" y terminamos con punto (.).
+    -   Si es 1: Usamos "argument" (singular) y terminamos con dos puntos (:).
+    -   Si es más de 1: Usamos "arguments" (plural) y terminamos con dos puntos (:).
+-   El Bucle for:
+    -   Usamos range(1, argc + 1) para empezar desde el índice 1 (el primer argumento real) hasta el último.
+    -   Imprimimos la posición y el valor usando el formato solicitado. 
+-   argv es una lista y calculamos su tamaño con len().
 
 ## 3-infinite_add.py
-
-```Python
-
-```
 `3-infinite_add.py`
 ```Python
 #!/usr/bin/python3
@@ -282,20 +241,15 @@ if __name__ == "__main__":
     print("{:d}".format(total))
 
 ```
-
-    ■   total = 0: Inicializamos una variable acumuladora.
-    ■   len(sys.argv):
-        -   Si no hay argumentos, len será 1 (el nombre del script). El range(1, 1) no se ejecutará y el programa imprimirá 0.
-        -   Si hay argumentos, el bucle recorrerá cada uno de ellos.
-    ■   int(sys.argv[i]): Los argumentos de la línea de comandos siempre se reciben como strings. Es obligatorio convertirlos a enteros para poder sumarlos matemáticamente.
+-   total = 0: Inicializamos una variable acumuladora.
+-   len(sys.argv):
+    -   Si no hay argumentos, len será 1 (el nombre del script). El range(1, 1) no se ejecutará y el programa imprimirá 0.
+    -   Si hay argumentos, el bucle recorrerá cada uno de ellos.
+-   int(sys.argv[i]): Los argumentos de la línea de comandos siempre se reciben como strings. Es obligatorio convertirlos a enteros para poder sumarlos matemáticamente.
     
-    ■   Python 3 no tiene un límite fijo para el tamaño de un entero
-    ■   argv: Usamos sys.argv[1:] (slicing) o el rango desde 1 para ignorar el nombre del script
+-   Python 3 no tiene un límite fijo para el tamaño de un entero
+-   argv: Usamos sys.argv[1:] (slicing) o el rango desde 1 para ignorar el nombre del script
 ##  4-hidden_discovery.py
-
-```Python
-
-```
 `4-hidden_discovery.py`
 ```Python
 #!/usr/bin/python3
@@ -311,24 +265,23 @@ if __name__ == "__main__":
             print("{:s}".format(name))
 
 ```
-    ■   import hidden_4: 
-        Aunque el archivo sea un .pyc (bytecode), Python lo importa igual que un archivo .py. La extensión no se incluye en el import.
-    ■   dir(hidden_4): 
-        Esta función devuelve una lista de strings con todos los atributos, variables y funciones dentro del módulo.
-    ■   sorted(names): 
-        El ejercicio pide orden alfabético. sorted() toma la lista y devuelve una nueva versión ordenada.
-    ■   if not name.startswith("__"): 
-        En Python, los nombres que empiezan con doble guion bajo (como __name__ o __doc__) se consideran "built-in" o internos.
+-   import hidden_4: 
+    -   Aunque el archivo sea un .pyc (bytecode), Python lo importa igual que un archivo .py. La extensión no se incluye en el import.
+-   dir(hidden_4): 
+    -   Esta función devuelve una lista de strings con todos los atributos, variables y funciones dentro del módulo.
+-   sorted(names): 
+    -   El ejercicio pide orden alfabético. sorted() toma la lista y devuelve una nueva versión ordenada.
+-   if not name.startswith("__"): 
+    -   En Python, los nombres que empiezan con doble guion bajo (como __name__ o __doc__) se consideran "built-in" o internos.
 
-    ■   ¿Qué es un .pyc?: 
-        Explica que es el archivo que genera Python después de "compilar" el código fuente a bytecode para que se ejecute más rápido la próxima vez.
-    ■   Introspección: 
-        Menciona que dir() es una herramienta de introspección, una característica de Python que permite al programa examinarse a sí mismo en tiempo de ejecución.
-    ■   Filtro de Dunders: 
-        Los nombres con __ se llaman comúnmente "Dunders" (Double Underscores). 
-        Filtrarlos es una práctica común para ver solo la API pública de un módulo.
+-   ¿Qué es un .pyc?: 
+    Explica que es el archivo que genera Python después de "compilar" el código fuente a bytecode para que se ejecute más rápido la próxima vez.
+-   Introspección: 
+    -   Menciona que dir() es una herramienta de introspección, una característica de Python que permite al programa examinarse a sí mismo en tiempo de ejecución.
+-   Filtro de Dunders: 
+    -   Los nombres con __ se llaman comúnmente "Dunders" (Double Underscores). 
+    -   Filtrarlos es una práctica común para ver solo la API pública de un módulo.
 ##  5-variable_load.py
-
 `variable_load_5.py`
 ```Python
 #!/usr/bin/python3
@@ -343,18 +296,17 @@ if __name__ == "__main__":
     print("{:d}".format(a))
 
 ```
+-   from variable_load_5 import a:
+    -   Estamos importando únicamente la variable a.
+    -   Esto es más eficiente que importar todo el módulo si solo necesitamos un dato específico.
+-   if __name__ == "__main__"::
+    -   Como en las tareas anteriores, esto garantiza que el print solo se ejecute cuando corras el script directamente. 
+    -   Si otro archivo importa 5-variable_load.py, no se imprimirá nada.
 
-    ■   from variable_load_5 import a:
-        -   Estamos importando únicamente la variable a.
-        -   Esto es más eficiente que importar todo el módulo si solo necesitamos un dato específico.
-    ■   if __name__ == "__main__"::
-        -   Como en las tareas anteriores, esto garantiza que el print solo se ejecute cuando corras el script directamente. 
-        -   Si otro archivo importa 5-variable_load.py, no se imprimirá nada.
+-   print("{:d}".format(a)):
+    -   Usamos el formateo de cadena para asegurar que el valor se imprima como un entero decimal, siguiendo el estándar de los ejercicios anteriores.
 
-    ■   print("{:d}".format(a)):
-        -   Usamos el formateo de cadena para asegurar que el valor se imprima como un entero decimal, siguiendo el estándar de los ejercicios anteriores.
-
-    ■   Importancia del Namespace: 
-        Explica que al usar from variable_load_5 import a, la variable a ahora existe directamente en tu archivo actual. No necesitas escribir variable_load_5.a.
-    ■   Modularidad: 
-        Este ejercicio demuestra cómo los archivos de configuración o de datos (como una lista de constantes) pueden mantenerse separados de la lógica principal del programa.
+-   Importancia del Namespace: 
+    -   Explica que al usar from variable_load_5 import a, la variable a ahora existe directamente en tu archivo actual. No necesitas escribir variable_load_5.a.
+-   Modularidad: 
+    -   Este ejercicio demuestra cómo los archivos de configuración o de datos (como una lista de constantes) pueden mantenerse separados de la lógica principal del programa.
