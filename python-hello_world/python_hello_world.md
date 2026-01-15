@@ -64,7 +64,8 @@ Strings are sequences of characters wrapped in single (') or double (") quotes.
 
     -   Official Style: 
         It is called PEP 8 (Python Enhancement Proposal 8). 
-        It provides guidelines for naming conventions (like using snake_case for variables), indentation (4 spaces), and white space.
+        It provides guidelines for naming conventions (like using snake_case for variables), 
+        indentation (4 spaces), and white space.
 
     -   Checking with pycodestyle: 
         It is a tool that automatically checks your code for style violations. 
@@ -76,7 +77,9 @@ Strings are sequences of characters wrapped in single (') or double (") quotes.
 ##   Question #0
 What does this command line print?
 
->>> print("Holberton school")
+```Python
+print("Holberton school")
+```
 
 -   Holberton
 -   “Holberton school”
@@ -86,7 +89,9 @@ What does this command line print?
 ##   Question #1
 What does this command line print?
 
->>> print(f"{98} Battery street")
+```Python
+print(f"{98} Battery street")
+```
 
 -   `98 Battery street`
 -   f"98 Battery street"
@@ -96,7 +101,9 @@ What does this command line print?
 ##  Question #2
 What does this command line print?
 
->>> print(f"{98} Battery street, {'San Francisco'}")
+```Python
+print(f"{98} Battery street, {'San Francisco'}")
+```
 
 -   “98 Battery street, San Francisco”
 -   8 Battery street, San
@@ -106,8 +113,10 @@ What does this command line print?
 ##  Question #3
 What does this command line print?
 
->>> a = "Python is cool"
->>> print(a[4])
+```Python
+a = "Python is cool"
+print(a[4])
+```
 
 -   P
 -   n
@@ -117,8 +126,10 @@ What does this command line print?
 ##  Question #4
 What does this command line print?
 
->>> a = "Python is cool"
->>> print(a[0:6])
+```Python
+a = "Python is cool"
+print(a[0:6])
+```
 
 -   `Python`
 -   Pytho
@@ -128,8 +139,10 @@ What does this command line print?
 ##  Question #5
 What does this command line print?
 
->>> a = "Python is cool"
->>> print(a[:6])
+```Python
+a = "Python is cool"
+print(a[:6])
+```
 
 -   Pytho
 -   `Python`
@@ -139,8 +152,10 @@ What does this command line print?
 ##  Question #6
 What does this command line print?
 
->>> a = "Python is cool"
->>> print(a[7:])
+```Python
+a = "Python is cool"
+print(a[7:])
+```
 
 -   Python i
 -   Python is
@@ -150,8 +165,10 @@ What does this command line print?
 ##  Question #7
 What does this command line print?
 
->>> a = "Python is cool"
->>> print(a[7:-5])
+```Python
+a = "Python is cool"
+print(a[7:-5])
+```
 
 -   on
 -   nohtyP
@@ -162,8 +179,10 @@ What does this command line print?
 ##  Question #8
 What does this command line print?
 
->>> a = "Python is cool"
->>> print(a[-2])
+```Python
+a = "Python is cool"
+print(a[-2])
+```
 
 -   ol
 -   l
