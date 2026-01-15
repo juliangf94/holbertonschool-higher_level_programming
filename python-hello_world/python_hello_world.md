@@ -197,9 +197,9 @@ print(a[-2])
 #!/usr/bin/python3
 print("\"Programming is like building a multilingual puzzle")
 ```
-```markdown
+
 Output: 
-```
+
 ```bash
 "Programming is like building a multilingual puzzle
 ```
@@ -212,9 +212,9 @@ pycodestyle 2-print.py
 number = 98
 print(f"{number:d} Battery street")
 ```
-```markdown
+
 Output: 
-```
+
 ```bash
 98 Battery street
 ```
@@ -229,9 +229,9 @@ pycodestyle 3-print_number.py
 number = 3.14159
 print(f"Float: {number:.2f}")
 ```
-```markdown
+
 Output: 
-```
+
 ```bash
 Float: 3.14
 ```
@@ -250,9 +250,9 @@ str = "Holberton School"
 print(str * 3)
 print(str[:9])
 ```
-```markdown
+
 Output: 
-```
+
 ```bash
 Holberton SchoolHolberton SchoolHolberton School
 Holberton
@@ -268,9 +268,9 @@ str2 = "School"
 str1 = f"Welcome to {str1} {str2}!"
 print(str1)
 ```
-```markdown
+
 Output: 
-```
+
 ```bash 
 Welcome to Holberton School!
 ```
@@ -288,9 +288,9 @@ print(f"First 3 letters: {word_first_3}")
 print(f"Last 2 letters: {word_last_2}")
 print(f"Middle word: {middle_word}")
 ```
-```markdown
+
 Output: 
-```
+
 ```bash
 First 3 letters: Hol
 Last 2 letters: on
@@ -308,9 +308,9 @@ str = "Python is an interpreted, interactive, object-oriented programming\
 str = str[39:67] + str[107:112] + str[:6]
 print(str)
 ```
-```markdown
+
 Output: 
-```
+
 ```bash
 object-oriented programming with Python
 ```
@@ -323,9 +323,9 @@ Write a Python script that prints “The Zen of Python”, by Tim Peters, follow
 #!/usr/bin/python3
 import this
 ```
-```markdown
+
 Output: 
-```
+
 ```bash
 The Zen of Python, by Tim Peters
 
