@@ -459,3 +459,68 @@ def fizzbuzz():
 pycodestyle 12-fizzbuzz.py
 ```
 
+##  100-print_tebahpla.py
+`100-print_tebahpla.py`
+```Python
+#!/usr/bin/python3
+for i in range(122, 96, -1):
+    print("{:c}".format(i if i % 2 == 0 else i - 32), end="")
+
+```
+Output:
+```Bash
+zYxWvUtSrQpOnMlKjIhGfEdCbAjuliangf94@DESKTOP-3UBL8O2:~
+```
+-   {:c}:
+    -   Es el formateador que convierte un número entero en su carácter ASCII correspondiente.
+-   Expresión condicional (i if i % 2 == 0 else i - 32):
+    -   Evalúa si el índice es par o impar dentro del mismo print para decidir si resta 32 (convertir a mayúscula) o no.
+-   range(122, 96, -1):
+    -   Comienza en 122 ('z') y termina justo antes del 96 (en el 97, que es 'a'), restando uno en cada paso.
+
+```Bash
+pycodestyle 100-print_tebahpla.py
+```
+
+## 101-remove_char_at.py
+`101-main.py`
+```Python
+#!/usr/bin/env python3
+remove_char_at = __import__('101-remove_char_at').remove_char_at
+
+print(remove_char_at("Best School", 3))
+print(remove_char_at("Chicago", 2))
+print(remove_char_at("C is fun!", 0))
+print(remove_char_at("School", 10))
+print(remove_char_at("Python", -2))
+```
+`101-remove_char_at.py`
+```Python
+#!/usr/bin/python3
+def remove_char_at(str, n):
+    if n >= 0:
+        return (str[:n] + str[n + 1:])
+    return (str)
+
+```
+Output:
+```Bash
+Bes School
+Chcago
+ is fun!
+School
+Python
+```
+### Explicación:
+-   Validación del índice (if n >= 0):
+    -   El ejercicio pide tratar el índice como en C. Si n es negativo, el comportamiento esperado según el ejemplo de 101-main.py es devolver la cadena original sin cambios.
+-   Slicing (str[:n]):
+    -   Obtiene la parte de la cadena desde el inicio hasta justo antes de la posición n.
+-   Slicing (str[n + 1:]):
+    -   Obtiene la parte de la cadena desde la posición inmediatamente posterior a n hasta el final.
+-   Concatenación (+):
+    -   Une ambas partes, dejando fuera efectivamente el carácter que estaba en la posición n.
+
+```Bash
+pycodestyle 101-remove_char_at.py
+```
