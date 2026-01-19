@@ -1,0 +1,18 @@
+# Ignorar carpetas de otros meses que están un nivel arriba
+../(1)Octubre/
+../(2)Noviembre/
+../(3)Diciembre/
+../holbertonschool-*/
+../MockInterview/
+../git-intro/
+../git.txt
+
+# Ignorar carpetas dentro de Enero
+semaine2/
+semaine3/
+semaine5/
+semaine51/
+
+# Archivos de Python
+__pycache__/
+*.pyc
