@@ -11,12 +11,12 @@ static int get_depth(const binary_tree_t *tree)
 {
 	int depth = 0;
 
-	while (tree)
+	while (tree && tree->left)
 	{
 		depth++;
 		tree = tree->left;
 	}
-	return (depth - 1);
+	return (depth);
 }
 
 /**
@@ -29,7 +29,8 @@ static int get_depth(const binary_tree_t *tree)
  * @level: The current level of the node, starting at 0 for the root.
  * Return: 1 if the node and its subtree are perfect, 0 otherwise.
  */
-static int is_perfect_recursive_helper(const binary_tree_t *tree, int depth, int level)
+static int is_perfect_recursive_helper(const binary_tree_t *tree,
+		int depth, int level)
 {
 	if (tree->left == NULL && tree->right == NULL)
 		return (depth == level);
@@ -37,7 +38,8 @@ static int is_perfect_recursive_helper(const binary_tree_t *tree, int depth, int
 	{
 		return (0);
 	}
-	return (is_perfect_recursive_helper(tree->left, depth, level + 1) && is_perfect_recursive_helper(tree->right, depth, level + 1));
+	return (is_perfect_recursive_helper(tree->left, depth, level + 1)
+			&& is_perfect_recursive_helper(tree->right, depth, level + 1));
 }
 
 /**
