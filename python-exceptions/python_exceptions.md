@@ -401,3 +401,5 @@ Output:
 ```
 
 touch 0-safe_print_list.py 0-main.py 1-safe_print_integer.py 1-main.py 2-safe_print_list_integers.py 2-main.py 3-safe_print_division.py 3-main.py 4-list_division.py 4-main.py 5-raise_exception.py 5-main.py 6-raise_exception_msg.py 6-main.py README.md
+
+pycodestyle *.py
