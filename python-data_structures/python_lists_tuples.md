@@ -713,19 +713,12 @@ print(my_list)
 `11-delete_at.py`
 ```python
 def delete_at(my_list=[], idx=0):
-    copy = my_list[:]
-    if idx < 0 or idx >= len(my_list):
-        return copy
-    copy[idx] = element
-    return copy
+    if 0 <= idx < len(my_list):
+            del my_list[idx]
+    return my_list
 
 ```
-*   Cuando escribes copy[idx], le estás diciendo a Python: "Busca en la lista llamada copy el casillero que tiene el número de etiqueta idx".
 
-Recuerda que en programación empezamos a contar desde 0.
-
-Si idx es 3, Python va directo al cuarto casillero.
-*   thon toma el valor de la variable element y lo mete en el casillero seleccionado.
 Output:
 ```bash
 [1, 2, 3, 5]
