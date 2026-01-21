@@ -398,7 +398,7 @@ print("Element at index {:d} is {}".format(idx, element_at(my_list, idx)))
 ```python
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    if idx < 0 and idx >= len(my_list):
+    if idx < 0 or idx >= len(my_list):
         return None
     return my_list[idx]
 
@@ -426,7 +426,7 @@ print(my_list)
 ```python
 #!/usr/bin/python3
 def replace_in_list(my_list, idx, element):
-    if idx < 0 and idx >= len(my_list):
+    if idx < 0 or idx >= len(my_list):
         return my_list
     my_list[idx] = element
     return my_list
@@ -487,7 +487,7 @@ print(my_list)
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
     new_list = my_list[:]
-    if idx < 0 and idx >= len(my_list):
+    if idx < 0 or idx >= len(my_list):
         return new_list
     new_list[idx] = element
     return new_list
@@ -712,8 +712,20 @@ print(my_list)
 ```
 `11-delete_at.py`
 ```python
+def delete_at(my_list=[], idx=0):
+    copy = my_list[:]
+    if idx < 0 or idx >= len(my_list):
+        return copy
+    copy[idx] = element
+    return copy
 
 ```
+*   Cuando escribes copy[idx], le estás diciendo a Python: "Busca en la lista llamada copy el casillero que tiene el número de etiqueta idx".
+
+Recuerda que en programación empezamos a contar desde 0.
+
+Si idx es 3, Python va directo al cuarto casillero.
+*   thon toma el valor de la variable element y lo mete en el casillero seleccionado.
 Output:
 ```bash
 [1, 2, 3, 5]
