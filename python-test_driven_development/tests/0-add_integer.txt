@@ -13,22 +13,21 @@ The ``0-add_integer`` module
 Traceback (most recent call last):
 TypeError: a must be an integer
 
->>> add_integer()
-Traceback (most recent call last):
-TypeError: add_integer() missing 1 required positional argument: 'a'
-
->>> # Missing two arguments (a and b) is technically covered by calling with none
->>> # because 'b' has a default value. If you wanted to test both missing:
->>> import sys
+>>> # Handling Infinity (Float Overflow)
 >>> try:
-...     add_integer()
-... except TypeError as e:
+...     add_integer(float('inf'))
+... except Exception as e:
 ...     print(e)
-add_integer() missing 1 required positional argument: 'a'
+cannot convert float infinity to integer
 
->>> # Testing NaN case
+>>> # Handling NaN
 >>> try:
 ...     add_integer(float('nan'))
 ... except Exception as e:
 ...     print(e)
 cannot convert float NaN to integer
+
+>>> # Missing arguments
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
