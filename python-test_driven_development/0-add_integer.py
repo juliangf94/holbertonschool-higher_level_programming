@@ -24,10 +24,4 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
-    # Manejo de Overflow y NaN para Floats antes de castear
-    if a != a or abs(a) > 1.7976931348623158e+308:
-        raise OverflowError("cannot convert float infinity to integer")
-    if b != b or abs(b) > 1.7976931348623158e+308:
-        raise OverflowError("cannot convert float infinity to integer")
-
     return int(a) + int(b)
