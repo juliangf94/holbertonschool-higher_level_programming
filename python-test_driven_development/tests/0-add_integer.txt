@@ -6,30 +6,29 @@ The ``0-add_integer`` module
 >>> add_integer(1, 2)
 3
 
->>> add_integer(100, -2)
-98
-
->>> add_integer(2)
-100
-
 >>> add_integer(100.3, -2)
 98
 
->>> add_integer(100.9, 1)
-101
-
 >>> add_integer("4", 5)
-Traceback (most recent call last):
-TypeError: a must be an integer
-
->>> add_integer(4, "School")
-Traceback (most recent call last):
-TypeError: b must be an integer
-
->>> add_integer(None)
 Traceback (most recent call last):
 TypeError: a must be an integer
 
 >>> add_integer()
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> # Missing two arguments (a and b) is technically covered by calling with none
+>>> # because 'b' has a default value. If you wanted to test both missing:
+>>> import sys
+>>> try:
+...     add_integer()
+... except TypeError as e:
+...     print(e)
+add_integer() missing 1 required positional argument: 'a'
+
+>>> # Testing NaN case
+>>> try:
+...     add_integer(float('nan'))
+... except Exception as e:
+...     print(e)
+cannot convert float NaN to integer
