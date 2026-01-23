@@ -10,7 +10,7 @@ def roman_to_int(roman_string):
         'C': 100,
         'D': 500,
         'M': 1000
-    }    
+    }
     total = 0
     length = len(roman_string)
 
@@ -18,9 +18,8 @@ def roman_to_int(roman_string):
         current_val = roman_dict.get(roman_string[i], 0)
         if i + 1 < length:
             next_val = roman_dict.get(roman_string[i + 1], 0)
-            
             if current_val < next_val:
-                total -= current_val 
+                total -= current_val
             else:
                 total += current_val
         else:
