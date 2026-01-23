@@ -1,3 +1,4 @@
+============================
 The ``3-say_my_name`` module
 ============================
 
@@ -13,6 +14,12 @@ My name is Walter White
 >>> say_my_name("Bob")
 My name is Bob 
 
+>>> say_my_name("", "Smith")
+My name is  Smith
+
+>>> say_my_name("John", "")
+My name is John 
+
 >>> say_my_name(12, "White")
 Traceback (most recent call last):
 TypeError: first_name must be a string
@@ -24,3 +31,7 @@ TypeError: last_name must be a string
 >>> say_my_name(None, "White")
 Traceback (most recent call last):
 TypeError: first_name must be a string
+
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
