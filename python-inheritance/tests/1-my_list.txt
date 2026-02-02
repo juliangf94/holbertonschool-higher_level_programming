@@ -1,0 +1,60 @@
+===========================
+The MyList Inheritance Test
+===========================
+
+This test file ensures that the class MyList inherits correctly from the 
+built-in list and provides a specific method to print its contents sorted.
+
+Import the class from module:
+>>> MyList = __import__('1-my_list').MyList
+
+------------------
+Basic Functionality
+------------------
+
+We can instantiate the class and it should behave like a standard list.
+We will add integers in a non-sorted order:
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+
+Printing the object directly should show the elements in the order they 
+were added, because it inherits the standard list representation:
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+The method print_sorted() should print the list in ascending order:
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+Crucially, the original list must remain unchanged after the sort:
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+------------------
+Edge Cases
+------------------
+
+An empty list should print an empty brackets pair when sorted:
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+The class should handle negative integers correctly:
+>>> neg_list = MyList([-5, 10, -100, 0])
+>>> neg_list.print_sorted()
+[-100, -5, 0, 10]
+
+The class should also work if the list is already sorted:
+>>> already_sorted = MyList([1, 2, 3])
+>>> already_sorted.print_sorted()
+[1, 2, 3]
+
+Verification of inheritance:
+>>> isinstance(my_list, list)
+True
+>>> issubclass(MyList, list)
+True
