@@ -792,8 +792,8 @@ class BaseGeometry:
 [ValueError] age must be greater than 0
 [ValueError] distance must be greater than 0
 ```
----
 python3 -m doctest ./tests/*
+---
 
 ##  8. Rectangle
 Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).  
