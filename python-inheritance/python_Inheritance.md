@@ -369,7 +369,7 @@ print(u.id)
 ---
 #   Exercises
 ##  0. Lookup
-Write a function that returns the list of available attributes and methods of an object:
+Write a function that returns the list of available attributes and methods of an object:  
 `0-main.py`
 ```python
 #!/usr/bin/python3
@@ -419,7 +419,7 @@ def lookup(obj):
 ---
 
 ##  1. My list
-Write a class MyList that inherits from list
+Write a class MyList that inherits from list  
 `1-main.py`
 ```python
 #!/usr/bin/python3
@@ -471,7 +471,7 @@ class MyList(list):
 python3 -m doctest ./tests/*
 ---
 ##  2. Exact same object
-Write a function that returns True if the object is exactly an instance of the specified class ; otherwise False.
+Write a function that returns True if the object is exactly an instance of the specified class ; otherwise False.  
 `2-main.py`
 ```python
 #!/usr/bin/python3
@@ -527,7 +527,7 @@ In **2-main.py** example, an integer `a = 1` is technically an instance of objec
 ---
 
 ##  3. Same class or inherit from
-Write a function that returns True if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class ; otherwise False.
+Write a function that returns True if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class ; otherwise False.  
 `3-main.py`
 ```python
 #!/usr/bin/python3
@@ -566,7 +566,7 @@ def is_kind_of_class(obj, a_class):
     return isinstance(obj, a_class)
 
 ```
-`isinstance(obj, a_class)`: This function returns True if obj is an instance of a_class OR if it is an instance of a subclass of a_class. 
+`isinstance(obj, a_class)`: This function returns True if obj is an instance of a_class OR if it is an instance of a subclass of a_class.  
 **Output**
 ```bash
 1 comes from int
@@ -637,7 +637,7 @@ True inherited from class object
 ---
 
 ##  5. Geometry module
-Write an empty class BaseGeometry.
+Write an empty class BaseGeometry.  
 `5-main.py`
 ```python
 #!/usr/bin/python3
@@ -675,7 +675,7 @@ class BaseGeometry:
 ---
 
 ##  6. Improve Geometry
-Write a class BaseGeometry (based on 5-base_geometry.py).
+Write a class BaseGeometry (based on 5-base_geometry.py).  
 `6-main.py`
 ```python
 #!/usr/bin/python3
@@ -719,7 +719,7 @@ class BaseGeometry:
 ---
 
 ##  7. Integer validator
-Write a class BaseGeometry (based on 6-base_geometry.py).
+Write a class BaseGeometry (based on 6-base_geometry.py).  
 `7-main.py`
 ```python
 #!/usr/bin/python3
@@ -796,7 +796,7 @@ class BaseGeometry:
 python3 -m doctest ./tests/*
 
 ##  8. Rectangle
-Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
+Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).  
 `8-main.py`
 ```python
 #!/usr/bin/python3
@@ -856,7 +856,7 @@ class Rectangle(BaseGeometry):
 ---
 
 ##  9. Full rectangle
-Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)
+Write a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)  
 `9-main.py`
 ```python
 #!/usr/bin/python3
@@ -924,7 +924,7 @@ class Rectangle(BaseGeometry):
 ---
 
 ##  10. Square #1
-Write a class Square that inherits from Rectangle (9-rectangle.py):
+Write a class Square that inherits from Rectangle (9-rectangle.py):  
 `10-main.py`
 ```python
 #!/usr/bin/python3
@@ -983,7 +983,7 @@ Using `super()`:
 ---
 
 ##  11. Square #2
-Write a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py).
+Write a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py).  
 `11-main.py`
 ```python
 #!/usr/bin/python3
