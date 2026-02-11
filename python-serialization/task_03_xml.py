@@ -40,6 +40,7 @@ def deserialize_from_xml(filename):
     try:
         #   Parse the XML file
         tree = ET.parse(filename)
+        #   Gives use access to <data>
         root = tree.getroot()
 
         #   Rebuild the dict from child elements

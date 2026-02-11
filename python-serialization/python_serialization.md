@@ -371,24 +371,25 @@ if __name__ == "__main__":
 **deserialize**
 -   `tree = ET.parse(filename)`: 
     +   Python abre el archivo y analiza la estructura para asegurarse de que el XML esté bien escrito.
-
 -   `root = tree.getroot()`: 
     +   Le pides a Python que te dé acceso al elemento principal (<data>).
     +   Esto es necesario para poder ver qué hay dentro.
     +   Al deserializar, esto nos da acceso al elemento <data>, permitiéndonos iterar por sus "hijos" para sacar los nombres de las etiquetas (child.tag) y sus valores (`child.text`).
-
+---
 -   `deserialized_dict = {}`: 
     +   Creas un diccionario vacío donde irás guardando los datos recuperados.
-
-for child in root:: Recorres cada etiqueta que esté dentro de <data>.
-
-child.tag: Es el nombre de la etiqueta (ej: "name"). Esto se convierte en la llave de tu diccionario.
-
-child.text: Es el contenido que está entre las etiquetas (ej: "John"). Esto se convierte en el valor.
-
-deserialized_dict[child.tag] = child.text: Metes la pareja llave-valor en tu diccionario.
-
-return deserialized_dict: Una vez que termina de leer todas las etiquetas, te entrega el diccionario armado.
+-   `for child in root:`: 
+    +   Recorres cada etiqueta que esté dentro de <data>.
+    +   `child.tag`: 
+        *   Es el nombre de la etiqueta (ej: "name"). 
+        *   Esto se convierte en la llave de tu diccionario.
+    +   `child.text`: 
+        *   Es el contenido que está entre las etiquetas (ej: "John"). 
+        *   Esto se convierte en el valor.
+    +   `deserialized_dict[child.tag] = child.text`: 
+        *   Metes la pareja llave-valor en tu diccionario.
+-   `return deserialized_dict`: 
+    +   Una vez que termina de leer todas las etiquetas, te entrega el diccionario armado.
 
 **Output**
 ```bash
