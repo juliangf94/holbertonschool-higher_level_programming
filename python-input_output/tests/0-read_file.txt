@@ -1,0 +1,9 @@
+>>> read_file = __import__('0-read_file').read_file
+
+>>> read_file("my_file_0.txt")
+We offer a truly innovative approach to education... (el contenido esperado)
+
+>>> read_file("non_existent.txt")
+Traceback (most recent call last):
+    ...
+FileNotFoundError: [Errno 2] No such file or directory: 'non_existent.txt'
