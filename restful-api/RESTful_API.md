@@ -22,7 +22,7 @@ HTTP is a client-server protocol: `requests` are sent by one entity, the user-ag
 Most of the time the user-agent is a Web browser, but it can be anything, for example, a robot that crawls the Web to populate and maintain a search engine index.  
 Each individual request is sent to a server, which handles it and provides an answer called the response.  
 Between the client and the server there are numerous entities, collectively called proxies, which perform different operations and act as gateways or caches, for example.
-
+<pre>
 +----------+        +----------+        +----------+        +----------+
 |  Client  |        |   Proxy  |        |   Proxy  |        |  Server  |
 +----------+        +----------+        +----------+        +----------+
@@ -35,6 +35,7 @@ Between the client and the server there are numerous entities, collectively call
 +----------+        +----------+        +----------+        +----------+
 |  Client  |        |   Proxy  |        |   Proxy  |        |  Server  |
 +----------+        +----------+        +----------+        +----------+
+</pre>
 
 In reality, there are more computers between a browser and the server handling the request: there are routers, modems, and more.  
 Thanks to the layered design of the Web, these are hidden in the network and transport layers.  
@@ -187,7 +188,7 @@ From social media platforms sharing data with advertisement agencies to complex 
 Developing a solid understanding of how to consume, develop, secure, and document these APIs equips you with a critical skill set. It's a blend of understanding both the technical intricacies and the larger design picture, ensuring seamless and efficient communication in the digital world.
 
 ##  REST API Conceptual Diagram
-<pre> ```text
+<pre>
 +-------+           +-------+           +---------+           +---------+
 |       |  Request  |       |  Process  |         |  Fetch/   |         |
 |       |   ----->  |       |  -------> |         |  Modify   |         |
@@ -196,7 +197,7 @@ Developing a solid understanding of how to consume, develop, secure, and documen
 |       |  Response |       |  Return   |         |           |         |
 +-------+           +-------+           +---------+           +---------+
   Client            Web Server           API Server           Database
-``` </pre>
+</pre>
 ### Components:
 -   `Client`: The requester of the service, often a web browser or application.
 -   `Web Server`: Handles the incoming request, acts as a middleman before passing it to the API server.
