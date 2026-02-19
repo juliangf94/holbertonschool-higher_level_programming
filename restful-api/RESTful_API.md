@@ -318,7 +318,7 @@ curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.c
 
 ### Useful Shortcuts:
 | Flag | Name | Function | Example | Output |
-| :... | :... | :... | :... | :... |
+| :--- | :--- | :--- | :--- | :--- |
 | `-X` | Method | Specifies the HTTP method (POST, PUT, DELETE). | `curl -X DELETE https://jsonplaceholder.typicode.com/posts/1` | El servidor responderá con un cuerpo vacío {} y un código 200 OK, indicando que la "eliminación" (simulada) fue exitosa. |
 | `-I` | Head | Fetches only the headers of the response. | `curl -I https://jsonplaceholder.typicode.com/photos` | HTTP/2 200, content-type: application/json, y la fecha |
 | `-d` | Data | Sends data in a POST/PUT request (data-ascii). | `curl -X POST -d "title=NuevoPost&body=HolaMundo&userId=1" https://jsonplaceholder.typicode.com/posts` | El servidor te devolverá el objeto que enviaste junto con un id: 101. |
