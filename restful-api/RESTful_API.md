@@ -22,6 +22,7 @@ HTTP is a client-server protocol: `requests` are sent by one entity, the user-ag
 Most of the time the user-agent is a Web browser, but it can be anything, for example, a robot that crawls the Web to populate and maintain a search engine index.  
 Each individual request is sent to a server, which handles it and provides an answer called the response.  
 Between the client and the server there are numerous entities, collectively called proxies, which perform different operations and act as gateways or caches, for example.
+
 +----------+        +----------+        +----------+        +----------+
 |  Client  |        |   Proxy  |        |   Proxy  |        |  Server  |
 +----------+        +----------+        +----------+        +----------+
@@ -34,7 +35,6 @@ Between the client and the server there are numerous entities, collectively call
 +----------+        +----------+        +----------+        +----------+
 |  Client  |        |   Proxy  |        |   Proxy  |        |  Server  |
 +----------+        +----------+        +----------+        +----------+
-
 
 In reality, there are more computers between a browser and the server handling the request: there are routers, modems, and more.  
 Thanks to the layered design of the Web, these are hidden in the network and transport layers.  
@@ -187,7 +187,7 @@ From social media platforms sharing data with advertisement agencies to complex 
 Developing a solid understanding of how to consume, develop, secure, and document these APIs equips you with a critical skill set. It's a blend of understanding both the technical intricacies and the larger design picture, ensuring seamless and efficient communication in the digital world.
 
 ##  REST API Conceptual Diagram
-
+<pre> ```text
 +-------+           +-------+           +---------+           +---------+
 |       |  Request  |       |  Process  |         |  Fetch/   |         |
 |       |   ----->  |       |  -------> |         |  Modify   |         |
@@ -196,7 +196,7 @@ Developing a solid understanding of how to consume, develop, secure, and documen
 |       |  Response |       |  Return   |         |           |         |
 +-------+           +-------+           +---------+           +---------+
   Client            Web Server           API Server           Database
-
+``` </pre>
 ### Components:
 -   `Client`: The requester of the service, often a web browser or application.
 -   `Web Server`: Handles the incoming request, acts as a middleman before passing it to the API server.
@@ -257,7 +257,7 @@ An HTTP communication consists of a `Request` and a `Response`.
 3. **Common HTTP Methods**
 
 | Method | Description | Use Case |
-| :... | :... | :...|
+| :--- | :--- | :--- |
 | GET | Retrieves data from a specific resource. | Fetching a profile page or a list of blog posts. |
 | POST | Submits data to be processed to a specified resource. | Submitting a "Contact Us" form or creating a new user. |
 | PUT | Replaces all current representations of the target resource. | Updating an entire user profile with new information. |
@@ -265,7 +265,7 @@ An HTTP communication consists of a `Request` and a `Response`.
 
 4. **Common HTTP Status Codes**
 | Status Code | Description | Scenario |
-| :... | :... | :...|
+| :--- | :--- | :--- |
 |200 OK | The request has succeeded. | Successfully loading the homepage of a website. |
 | 301 Moved Permanently | The resource has been assigned a new permanent URI. | When a website changes its domain and redirects old links. |
 | 400 Bad Request | The server cannot process the request due to client error. | Sending a malformed JSON body in an API request. |
@@ -326,7 +326,7 @@ curl -X POST -d "title=foo&body=bar&userId=1" https://jsonplaceholder.typicode.c
 
 
 | Comando |	Acción Realizada |
-| :... | :... |
+| :--- | :--- |
 | curl -X DELETE ... | Ordena al servidor borrar un recurso. |
 | curl -I ... | Solo pide el "recibo" de la petición, no la mercancía. |
 | curl -d "key=val" ... | Empaqueta datos para enviar al servidor. |
