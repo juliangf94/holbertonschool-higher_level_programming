@@ -459,7 +459,8 @@ At the end of this exercise, students should be able to:
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
-
+# BaseHTTPRequestHandler tiene como limitacion principal que no tiene un 
+# sistema de ruteo integrado, Flask ofrece dercoradores
 class SimpleAPIRequestHandler(BaseHTTPRequestHandler):
     """
     Custom handler for a simple HTTP API.
@@ -609,6 +610,9 @@ def add_user():
     """Adds a new user via a POST request."""
     # Attempt to parse the request body as JSON
     # silent=True prevents Flask from crashing on invalid JSON, returning None instead
+    # Si de request.get_json recibes un None la causa probable es que el cliente 
+    # no envio el header 'Content-Type: application/json', Flask utiliza esta cabecera 
+    # para saber que debe intentar procesar el cuerpo de la petición como objeto JSON
     data = request.get_json(silent=True)
     if data is None:
         return jsonify({"error": "Invalid JSON"}), 400
@@ -723,7 +727,8 @@ from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity, get_jwt
 )
 from werkzeug.security import generate_password_hash, check_password_hash
-
+# get_jwt_identity es un atajo para el identificador principal, 
+# mientras que get_jwt permite acceder a claims adicionales como roles o timestamps
 app = Flask(__name__)
 
 # Security Configuration
@@ -792,6 +797,8 @@ def login():
             # Saves the user's name inside the token
             identity=username,
             # Saves if the user is a user or admin
+            # Como precaucion de seguridad no se deben guardar objetos grandes
+            # porque el token se envia en cada peticion y aumenta el overhead de red
             additional_claims={"role": user['role']}
         )
         return jsonify(access_token=access_token)
@@ -815,6 +822,7 @@ def admin_only():
     claims = get_jwt()
     if claims.get("role") != "admin":
         # 403 Forbidden is used when the user is authenticated but lacks permissions
+        # El error 403 implica saber quien es el usuario pero no dejarlo pasar
         return jsonify({"error": "Admin access required"}), 403
     return "Admin Access: Granted"
 
@@ -831,7 +839,7 @@ def handle_unauthorized_error(err):
 def handle_invalid_token_error(err):
     return jsonify({"error": "Invalid token"}), 401
 
-
+# El error 401 indica falta de autenticidad válida, es un token expirado
 @jwt.expired_token_loader
 def handle_expired_token_error(err):
     return jsonify({"error": "Token has expired"}), 401
@@ -852,6 +860,19 @@ if __name__ == "__main__":
 
 ```
 **Logic**
+-   `@jwt.token_in_blocklist_loader`: 
+    +   Este callback permite consultar una base de datos, (como Redis) para invalidar tokens especificos aunquete tecnicamnete sean validos
+-   `Salt`:
+    +   Asegura que dos contraseñas identicas tengan hashes diferentes, evitando ataques de Rainbow Tables.      
+    +   Aáde aleatoriedad para que la misma entrada no genere siempre la misma salida predecible
+-   `/data`:
+    +   Se prefiere devolver una lista de objetos en lugar de una lista de strings:
+        *   Para permitir la extensibilidad futura sin romper la compatibilidad con clientes antiguos.
+        +   Si devuelves objetos, puedes añadir nuevos campos (como ID o fecha) sin cambiar la estructura basica de la lista.
+-   `create_access_token`:
+    +   Si intentas ejecutarlo sin configurar `JWT_SECRET_KEY`:
+        *   Flask lanzará una exepcion (RuntimeError) porque no tiene una semilla para firmar el token
+        *   La firma criptográfica requiere obligatoriamente una llave secreta; sin ella el token no seria seguro ni verificable
 **Cifrado vs Hashing**
 -   Cifrado (Encryption):
     +   Bidireccional (puedes volver al origen).
@@ -867,3 +888,37 @@ if __name__ == "__main__":
 **Output**
 ```bash
 ```
+
+---
+---
+#   Conceptos Clave de RESTful API y Seguridad
+-   HTTP Verbs (GET, POST, PUT, DELETE) & Status Codes (200, 201, 400, 401, 403, 404, 409)
+-   Flask Routing: 
+    +   `@app.route()` with dynamic parameters <username>
+-   Request Handling: 
+    +   `request.get_json(silent=True)`
+    +   `request.headers`
+-   Response Management: 
+    +   `jsonify()` for JSON serialization and status codes
+-   Security: 
+    +   Password Hashing 
+        *   `generate_password_hash`
+        *   `check_password_hash`
+-   Authentication: 
+    +   HTTP Basic Auth 
+        *   `@auth.login_required` 
+        *   `verify_password`
+-   JWT (JSON Web Tokens): 
+    +   Access tokens
+    +   payloads
+    +   additional claims
+    +   secret keys
+-   Authorization: 
+    +   Role-Based Access Control (RBAC)
+        *   `get_jwt()`
+-   Error Handling: 
+    +   `@jwt.unauthorized_loader` 
+    +   `@jwt.expired_token_loader` 
+    +   Custom Error Handlers
+-   Data Structures: 
+    +   In-memory persistence using Python Dictionaries and Lists
