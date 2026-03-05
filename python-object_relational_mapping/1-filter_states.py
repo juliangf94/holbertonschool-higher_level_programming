@@ -8,7 +8,7 @@ import sys
 import MySQLdb
 
 
-if __name__ == "__main__":
+def filter_states():
     """
     Connects to the MySQL database and executes a query to filter states
     whose names start with the uppercase letter N. Results are sorted
@@ -27,16 +27,16 @@ if __name__ == "__main__":
     # Execute SQL query to filter names starting with 'N'
     # 'LIKE BINARY' is used to ensure case sensitivity (Upper N)
     # '%' is a wildcard that matches any characters following 'N'
-    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC"
-    cursor.execute(query)
-
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' "
+                   "ORDER BY states.id ASC")
     # Fetch all records that match the query
     query_rows = cursor.fetchall()
-
     # Display the results
     for row in query_rows:
         print(row)
-
     # Close the cursor and the database connection
     cursor.close()
     db.close()
+
+if __name__ == "__main__":
+    filter_states()
