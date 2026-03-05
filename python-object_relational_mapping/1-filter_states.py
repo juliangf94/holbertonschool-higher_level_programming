@@ -8,7 +8,7 @@ import sys
 import MySQLdb
 
 
-def filter_states():
+if __name__ == "__main__":
     """
     Connects to the database and fetches states starting with N.
     """
@@ -32,7 +32,7 @@ def filter_states():
     # Execute SQL query to filter names starting with 'N'
     # 'LIKE BINARY' is used to ensure case sensitivity (Upper N)
     # '%' is a wildcard that matches any characters following 'N'
-    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
+    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC"
     cursor.execute(query)
 
     # Fetch all records that match the query
@@ -45,8 +45,3 @@ def filter_states():
     # Close the cursor and the database connection
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    # Prevent execution if the script is imported
-    filter_states()
