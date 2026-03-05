@@ -8,12 +8,7 @@ import sys
 import MySQLdb
 
 
-def filter_states():
-    """
-    Connects to the MySQL database and executes a query to filter states
-    whose names start with the uppercase letter N. Results are sorted
-    by the states.id in ascending order.
-    """
+if __name__ == "__main__":
     # Establish connection to MySQL server
     db = MySQLdb.connect(
         host="localhost",
@@ -37,7 +32,3 @@ def filter_states():
     # Close the cursor and the database connection
     cursor.close()
     db.close()
-
-
-if __name__ == "__main__":
-    filter_states()
