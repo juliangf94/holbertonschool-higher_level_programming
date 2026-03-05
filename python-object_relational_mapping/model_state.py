@@ -23,7 +23,7 @@ class State(Base):
         autoincrement=True,
         unique=True
     )
-    
+
     name = Column(
         String(128),
         nullable=False

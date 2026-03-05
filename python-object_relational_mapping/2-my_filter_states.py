@@ -32,7 +32,7 @@ def filter_by_input():
     # Construct the SQL query using format() as requested
     # BINARY ensures the match is case-sensitive (e.g., 'Arizona' != 'arizona')
     query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(state_name)
-    
+
     # Execute the formatted query
     cursor.execute(query)
 

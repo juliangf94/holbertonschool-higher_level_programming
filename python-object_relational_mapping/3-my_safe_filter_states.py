@@ -34,7 +34,7 @@ def safe_filter_states():
     # Use parameterized query (%s) to prevent SQL injection.
     # We pass the query string and a tuple containing the user input separately.
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    
+
     # Execute the query passing the state_name as a tuple element
     cursor.execute(query, (state_name,))
 

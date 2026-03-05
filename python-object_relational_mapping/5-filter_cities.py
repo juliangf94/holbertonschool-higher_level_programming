@@ -39,7 +39,7 @@ def filter_cities_by_state():
         WHERE states.name = %s
         ORDER BY cities.id ASC
     """
-    
+
     # Execute the query passing the state_name safely as a tuple
     cursor.execute(query, (state_name,))
 

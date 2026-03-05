@@ -38,7 +38,7 @@ def list_cities():
         JOIN states ON cities.state_id = states.id
         ORDER BY cities.id ASC
     """
-    
+
     # Execute the query (Only once, as required)
     cursor.execute(query)
 
