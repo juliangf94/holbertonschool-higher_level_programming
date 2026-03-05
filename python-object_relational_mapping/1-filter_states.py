@@ -10,25 +10,20 @@ import MySQLdb
 
 if __name__ == "__main__":
     """
-    Connects to the database and fetches states starting with N.
+    Connects to the MySQL database and executes a query to filter states
+    whose names start with the uppercase letter N. Results are sorted
+    by the states.id in ascending order.
     """
-    # Capture arguments from the command line
-    db_user = sys.argv[1]
-    db_password = sys.argv[2]
-    db_name = sys.argv[3]
-
     # Establish connection to MySQL server
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=db_user,
-        passwd=db_password,
-        db=db_name
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
     )
-
     # Create a cursor to interact with the database
     cursor = db.cursor()
-    
     # Execute SQL query to filter names starting with 'N'
     # 'LIKE BINARY' is used to ensure case sensitivity (Upper N)
     # '%' is a wildcard that matches any characters following 'N'
