@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Prints the State object with the name passed as argument from hbtn_0e_6_usa"""
+"""Prints the State object with the name passed as argument"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
@@ -13,7 +13,6 @@ if __name__ == "__main__":
         ),
         pool_pre_ping=True
     )
-    Base.metadata.create_all(engine)
     session = Session(engine)
     state = session.query(State).filter(
         State.name == sys.argv[4]
