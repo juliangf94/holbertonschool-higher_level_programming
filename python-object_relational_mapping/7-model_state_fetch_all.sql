@@ -1,0 +1,2 @@
+-- Insert states into hbtn_0e_6_usa
+INSERT INTO states (name) VALUES ("California"), ("Arizona"), ("Texas"), ("New York"), ("Nevada");
