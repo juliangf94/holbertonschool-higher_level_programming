@@ -43,7 +43,7 @@ This usually happens inside the __init__ method, but it can happen anywhere in t
 #   How to inherit class from another?
 Inheritance is essentially a mechanism where a Subclass (the child) takes on the attributes and methods of a Base Class (the parent).
 
--   Single Inheritance: Pass the parent class in parentheses during definition.
+-   **Single Inheritance**: Pass the parent class in parentheses during definition.
 ```python
 class Child(Parent):
     pass
@@ -62,7 +62,7 @@ class Dog(Animal):
 ```
 ---
 #   How to define a class with multiple base classes?
--   Multiple Base Classes: Python allows a class to inherit from multiple parents.
+-   **Multiple Base Classes**: Python allows a class to inherit from multiple parents.
     +   MRO (Method Resolution Order): Python uses an algorithm called C3 Linearization to determine the "search path" for methods.
         *   The Order Matters: In **class Android(Robot, Human)**:
             Python looks for a method in `Android` first, then `Robot`, then `Human`.
@@ -125,9 +125,10 @@ The primary goals of inheritance are:
     -   Extensibility: Add new features to existing code without modifying the original class.
 ---
 #   What are, when and how to use isinstance, issubclass, type and super built-in functions?
--   `isinstance(obj, Class)`: Checks if an object is an instance of a class (or its subclasses). It´s used for **input validation** within functions to ensure the data passed is of a compatible type.
+-   `isinstance(obj, Class)`: Checks if an object is an instance of a class (or its subclasses).  
+    It´s used for **input validation** within functions to ensure the data passed is of a compatible type.
     +   Example_1:
-        **isinstance(obj, int)** will be True only if obj.__class__ is int or some class derived from int.
+        **isinstance(obj, int)** will be True only if `obj.__class__` is int or some class derived from int.
     +   Example_2:
         **isinstance(my_dog, Animal)**
     +   Example_3: Using a tuple of classes to check for multiple types.
@@ -194,6 +195,15 @@ class Manager(Worker):
 **What do these lines print?**
 
 ```python
+class Base():
+    """ My base class """
+
+    __nb_instances = 0
+
+    def __init__(self):
+        Base.__nb_instances += 1
+        self.id = Base.__nb_instances
+        
 b = Base()
 print(b.id)
 ```
