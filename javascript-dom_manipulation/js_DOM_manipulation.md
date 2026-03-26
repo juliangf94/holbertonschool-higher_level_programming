@@ -318,8 +318,8 @@ button.addEventListener('click', (event) => {
 
 #   Exercises:
 ##  0. Color Me
-Write a JavaScript script that updates the text color of the header element to red (#FF0000):
--   You must use document.querySelector to select the HTML tag
+Write a JavaScript script that updates the text color of the header element to red (`#FF0000`):
+-   You must use `document.querySelector` to select the HTML tag
 Please test with this HTML file in your browser:
 `0-main.html`
 ```html
@@ -357,7 +357,7 @@ Change color in:
 ---
 
 ##  1. Click and turn red
-Write a JavaScript script that updates the text color of the `header` element to red (#`FF0000`) when the user clicks on the tag with id `red_header`:
+Write a JavaScript script that updates the text color of the `header` element to red (`#FF0000`) when the user clicks on the tag with id `red_header`:
 Please test with this HTML file in your browser:
 `1-main.html`
 ```html
@@ -398,7 +398,7 @@ redHeader.addEventListener('click', () => {
 - Es la forma moderna y limpia de escribir funciones en JavaScript (ES6), cumpliendo con el requisito de no usar var y ser compatible con semistandard.
 
 3.  Selección por **ID vs Etiqueta**:
-- Usamos `#red_header` (con el numeral) porque estamos buscando un ID específico.
+- Usamos `#red_header` (con el numeral) porque estamos buscando un ID específico (si usamos `querySelector`).
 - Usamos `header` (sin nada) porque estamos buscando la etiqueta HTML.
 **Output**
 ```bash
